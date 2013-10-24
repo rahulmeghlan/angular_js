@@ -1,0 +1,13 @@
+<div class="add_container">
+    <input type="text" class="name" name="name" ng-model="name"/>
+    <input type="text" class="age" name="age" ng-model="age"/>
+
+    <input type="button" class="btn_blue" ng-click="addItem">
+
+    <ul class="list-items">
+        <li class="item" ng-repeat="person in persons">
+            {{person.name}} - {{person.age}}
+            <span class="remove" ng-click="removeItem"></span>
+        </li>
+    </ul>
+</div>
