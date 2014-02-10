@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>Angular JS Application</title>
+</head>
+<body data-ng-controller="TextController">
+
+<!--
+<p>{{text}}</p>
+
+<form data-ng-controller="startUpController">
+    Starting : <input data-ng-change="computeNeeded()" data-ng-model="funding.startFunding"/>
+    Recommendation : {{funding.needed}}
+</form>
+-->
+
+<div data-ng-controller="CartController">
+    <div data-ng-repeat="item in items">
+        <span data-ng-bind="item.title"></span>
+        <input data-ng-model="item.quantity"/>
+        <span data-ng-bind="item.price | currency"></span>
+        <span data-ng-bind="item.price * item.quantity | currency"></span>
+    </div>
+
+    <div>Total : {{totalCart() | currency}}</div>
+    <div>Discount : {{bill.discount | currency}}</div>
+    <div>Subtotal : {{subTotal() | currency}}</div>
+</div>
+
+<!--Include the library files-->
+<script type="text/javascript" src="lib/bower_components/angular/angular.js"></script>
+
+<!--Controllers-->
+<script type="text/javascript" src="app/init.js"></script>
+<script type="text/javascript" src="controllers/startupCtrl.js"></script>
+<script type="text/javascript" src="controllers/cartController.js"></script>
+
+</body>
+</html>
