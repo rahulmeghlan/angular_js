@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-ng-app='ShoppingModule'>
+<head>
+    <title>Shopping Controller</title>
+</head>
+<body data-ng-controller="ShoppingController">
+<h1>Shop!</h1>
+<table>
+    <tr data-ng-repeat="item in items">
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price | currency}}</td>
+    </tr>
+</table>
+
+<script type="text/javascript" src="../libraries/angular.js"></script>
+
+<script type="text/javascript" src="controller/ShoppingController.js"></script>
+<script type="text/javascript" src="modules/shoppingModule.js"></script>
+</body>
+</html>
